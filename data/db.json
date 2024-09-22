@@ -1,0 +1,74 @@
+{
+    "products": [
+      {
+        "id": "1",
+        "name": "Aloe Vera",
+        "type": "Xerophytic",
+        "price": "15.00",
+        "selling_price": "12.98",
+        "img": "https://images.unsplash.com/photo-1509423350716-97f9360b4e09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=435&q=80",
+        "sold_out": "false",
+        "description": "Aloe vera, also known as aloe, is a succulent plant that has fleshy leaves filled with a clear, nourishing gel. With soothing, healing, and moisturizing properties, Aloe vera is widely used in the cosmetic and personal care industry to help treat burns, skin irritations, and promote skin health. In addition, the plant has anti-inflammatory properties, antioxidants, and can contribute to improved digestion when consumed internally."
+      },
+      {
+        "id": "2",
+        "name": "Vine",
+        "type": "Climber",
+        "price": "35.00",
+        "selling_price": "31.99",
+        "img": "https://images.unsplash.com/photo-1536846826492-c51b3984bc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
+        "sold_out": "false",
+        "description": "The vine, also known as grapevine, is a woody climbing plant belonging to the family Vitaceae and the genus Vitis. Recognized mainly for producing grapes, the vine is cultivated throughout the world for the production of wine, juice, jam, and table grapes. Vines have long, flexible stems that extend and cling to supports, such as trellises or wires, by means of tendrils. Their leaves are large and palmate, providing shade for the developing grapes. Grapes, the fruit of the vines, come in a variety of colors and sizes, and are harvested when ripe. The vine is a plant of great economic and cultural importance, and its grapes are appreciated both for their flavor and for their use in beverage and food production."
+      },
+      {
+        "id": "3",
+        "name": "Cactus",
+        "type": "Succulent",
+        "price": "19.00",
+        "selling_price": "16.99",
+        "img": "https://images.unsplash.com/photo-1509937528035-ad76254b0356?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=724&q=80",
+        "sold_out": "false",
+        "description": "The cactus is a succulent plant that belongs to the Cactaceae family. Recognized for its ability to survive in arid, dry environments such as deserts, the cactus has succulent stems and modified spines that help reduce water loss. Its leaves are transformed into spines to prevent excessive transpiration and protect itself from predators. In addition, many cacti develop colorful, showy flowers that usually open at night to attract pollinators. With a wide variety of shapes and sizes, cacti are prized as ornamental plants because of their unique appearance and ability to adapt to extreme conditions."
+      },
+      {
+        "id": "4",
+        "name": "Succulent",
+        "type": "Succulent",
+        "price": "19.00",
+        "selling_price": "16.99",
+        "img": "https://images.unsplash.com/photo-1548587449-2c1dcd68cecd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=403&q=80",
+        "sold_out": "false",
+        "description": "Succulents are a diverse group of plants that possess the ability to store water in their leaves, stems, or roots, allowing them to survive in arid environments. These plants have fleshy leaves and tissues that are adapted to retain water, giving them a unique appearance. They come in a wide variety of shapes, sizes, and colors, with some featuring rosette-like succulent leaves, while others have succulent stems and spines. Succulents are valued for their ability to survive in dry conditions and for their hardiness, making them a popular choice for xerophytic gardens and interior decoration, and requiring less watering and maintenance compared to other plants."
+      },
+      {
+        "id": "5",
+        "name": "Gasteria",
+        "type": "Succulent",
+        "price": "25.00",
+        "selling_price": "22.99",
+        "img": "https://images.unsplash.com/photo-1509223197845-458d87318791?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=949&q=80",
+        "sold_out": "false",
+        "description": "Gasteria is a succulent plant that belongs to the genus Gasteria of the Asphodelaceae family. Native to southern Africa, Gasteria is prized for its succulent, fleshy, and attractive leaves. Its leaves are usually green, often with distinctive patterns or spots, and grow in compact rosettes. The plant produces floral stems that bear tubular flowers in varying shades, such as white, pink, or orange. Gasteria is popular as an ornamental plant because of its unique appearance and ease of cultivation, and is suitable for indoor and outdoor settings with indirect light. In addition, its succulent characteristics allow the plant to store water, making it resilient in drier conditions."
+      },
+      {
+        "id": "6",
+        "name": "Anthurium",
+        "type": "Aráceas",
+        "price": "35.70",
+        "selling_price": "33.95",
+        "img": "https://images.unsplash.com/photo-1603436326446-74e2d65f3168?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=471&q=80",
+        "sold_out": "false",
+        "description": "Anthurium is a tropical ornamental plant belonging to the family Araceae and the genus Anthurium. Native to the rainforests of Central and South America, this plant is known for its glossy leaves and sword-shaped hearts. Anthurium leaves can vary in color from deep green to shades of red, pink, or white, and usually have a glossy texture. In the center of the plant, a spike appears containing small, inconspicuous flowers surrounded by an eye-catching, colorful bract that can be red, pink, orange, or white. This bract is often mistaken for the flower, but is actually a modified leaf. Anthurium is a popular choice for indoor decoration because of its exotic and elegant appearance. In addition, it is a relatively easy plant to care for, and is appreciated for its longevity as a cut flower and its ability to add a tropical feel to any space."
+      },
+      {
+        "id": "7",
+        "name": "Bonsai",
+        "type": "Bonsai",
+        "price": "75.90",
+        "selling_price": "72.00",
+        "img": "https://images.unsplash.com/photo-1467043198406-dc953a3defa0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=429&q=80",
+        "sold_out": "true",
+        "description": "Bonsai is a horticultural art form that involves growing miniature trees or shrubs in small pots through techniques of pruning, shaping, and controlling growth. Originating in China and perfected in Japan, the practice of bonsai combines technical skills with an artistic vision to create scaled-down representations of nature. Bonsais are appreciated for their beauty, delicacy and harmony, capturing the essence of trees in their natural state, even at such a small size. Caring for a Bonsai requires dedication, patience and knowledge about the specific needs of each species, but the result is a living work of art that conveys a sense of serenity and connection with nature."
+      }
+    ]
+  }
