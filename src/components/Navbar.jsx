@@ -43,7 +43,7 @@ export default function Navbar() {
         to="/"
         className="lowercase font-light text-3xl whitespace-nowrap absolute mobile:relative left-1/2 mobile:left-0 mobile:transform-none transform -translate-x-1/2"
       >
-        <span className="text-[#00df9a]">Green</span>Leaf
+        <span className="text-[#598888]">Green</span>Leaf
       </NavLink>
 
       {/* Navigation Links */}
@@ -107,8 +107,8 @@ export default function Navbar() {
             <i className={`fa-solid ${isOpen ? "fa-circle-xmark" : ""}`}></i>
           </button>
 
-          <h1 className="lowercase font-light text-3xl mt-14">
-            <span className="text-[#00df9a]">Green</span>Leaf
+          <h1 className="lowercase font-light text-3xl mt-10">
+            <span className="text-[#598888]">Green</span>Leaf
           </h1>
 
           <div className="flex flex-col text-[#1E1E1E] font-light text-sm items-center space-y-4 py-7 px-4">

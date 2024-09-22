@@ -212,7 +212,7 @@ export default function Home() {
         <div className="container px-20 max-mobile:py-4 max-w-full">
           <h4 className="w-2/5 mb-12 font-bold text-3xl max-mobile:w-full max-mobile:mb-8 max-mobile:text-center max-mobile:text-base">
             What customers say about{" "}
-            <span className="text-[#00df9a]">green</span>
+            <span className="text-[#598888]">green</span>
             <span>leaf</span> ?
           </h4>
           <Swiper
