@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { MiniCartContext } from "../contexts/MiniCartContext"; // Adjust the import path
+import AddToCart from "./AddToCart"; // Adjust the import path if necessary
 
 export default function ProductCard(props) {
-  const { id, name, type, price, sellingPrice, img, soldOut, hasButton } = props;
+  const { id, name, type, price, sellingPrice, img, soldOut } = props;
+  const { toggleMiniCart } = useContext(MiniCartContext); // Get toggle function from context
+
   return (
     <section className="justify-self-center relative overflow-hidden">
       <Link className="cursor-pointer" to={`/products/${id}`} reloadDocument id={id}>
@@ -14,7 +18,7 @@ export default function ProductCard(props) {
 
         <img
           src={img}
-          alt={img}
+          alt={name}
           id={id}
           className="w-[280px] h-[280px] object-cover rounded-xl max-mobile:h-[185px]"
         />
@@ -39,9 +43,9 @@ export default function ProductCard(props) {
           </span>
         </div>
       </Link>
-      {/* {hasButton && (
-        <AddToCart id={id} />
-      )} */}
+
+      {/* Add to Cart button */}
+      <AddToCart product={{ id, name, img, selling_price: sellingPrice }} />
     </section>
   );
 }

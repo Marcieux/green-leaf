@@ -24,18 +24,16 @@ export default function Navbar() {
 
   return (
     <section
-      className={`flex items-center justify-between p-8 mobile:p-6 transition-all duration-300 ${
-        isSticky ? "sticky top-0 bg-white z-50 max-mobile:shadow-md" : ""
-      }`}
+      className={`flex items-center justify-between p-8 mobile:p-6 transition-all duration-300 ${isSticky ? "sticky top-0 bg-white z-50 max-mobile:shadow-md" : ""}`}
     >
-      {/* Burger Menu Button - Only visible on mobile */}
+      {/* Burger Menu Button */}
       <button
-        className={`mobile:hidden text-2xl z-40 transition-transform duration-500 ${
-          isOpen ? "rotate-180" : "rotate-0"
-        }`}
+        className={`mobile:hidden text-2xl z-40 transition-transform duration-500 ${isOpen ? "rotate-45" : "rotate-0"}`}
         onClick={toggleMenu}
       >
-        <i className={`fa-solid ${isOpen ? "" : "fa-bars"}`}></i>
+        <div className={`w-6 h-0.5 bg-[#598888] transition-all duration-300 ${isOpen ? "transform translate-y-1.5" : ""}`}></div>
+        <div className={`w-6 h-0.5 bg-[#598888] transition-all duration-300 ${isOpen ? "opacity-0" : "opacity-100"}`}></div>
+        <div className={`w-6 h-0.5 bg-[#598888] transition-all duration-300 ${isOpen ? "-translate-y-1.5" : ""}`}></div>
       </button>
 
       {/* Logo */}
@@ -80,7 +78,7 @@ export default function Navbar() {
           onClick={toggleMiniCart}
           className="relative transition-transform duration-300 hover:scale-125"
         >
-          <i className="fa-brands fa-opencart text-xl"></i>
+          <i className="fa-brands fa-opencart text-xl text-[#598888]"></i>
           {cartItems.length > 0 && (
             <div className="absolute -top-1 left-[1rem] w-6 h-6 text-xs text-white rounded-full bg-[#446969] flex items-center justify-center">
               {cartItems.reduce((acc, item) => acc + item.quantity, 0)}
@@ -88,7 +86,7 @@ export default function Navbar() {
           )}
         </button>
         <button className="transition-transform duration-300 hover:scale-125">
-          <i className="fa-regular fa-user text-xl"></i>
+          <i className="fa-regular fa-user text-xl text-[#598888]"></i>
         </button>
       </div>
 
@@ -98,46 +96,43 @@ export default function Navbar() {
       {/* Mobile Dropdown Menu */}
       {isOpen && (
         <div className="absolute z-20 p-10 top-0 left-0 bg-white w-full h-screen mobile:hidden overflow-y-scroll shadow-md animate-slideRight transition-all duration-400">
-          <button
-            className={`mobile:hidden text-2xl z-40 absolute right-10 top-8 transition-transform duration-500 ${
-              isOpen ? "rotate-180" : "rotate-0"
-            }`}
-            onClick={toggleMenu}
-          >
-            <i className={`fa-solid ${isOpen ? "fa-circle-xmark" : ""}`}></i>
-          </button>
-
           <h1 className="lowercase font-light text-3xl mt-10">
             <span className="text-[#598888]">Green</span>Leaf
           </h1>
 
           <div className="flex flex-col text-[#1E1E1E] font-light text-sm items-center space-y-4 py-7 px-4">
             <div className="flex flex-col items-start text-base border-b border-black w-full space-y-4 pb-8">
-              <button className="w-full py-2 px-4 bg-[#F3F4F6] rounded-lg hover:bg-[#E5E7EB] transition-colors duration-300">
+              <button className="w-full py-3 px-4 bg-[#F3F4F6] rounded-lg shadow hover:bg-[#E5E7EB] transition-colors duration-300 flex items-center justify-between">
                 Account <i className="fa-regular fa-user"></i>
               </button>
-              <button className="w-full py-2 px-4 bg-[#F3F4F6] rounded-lg hover:bg-[#E5E7EB] transition-colors duration-300">
+              <button
+                onClick={toggleMiniCart}
+                className="w-full py-3 px-4 bg-[#F3F4F6] rounded-lg shadow hover:bg-[#E5E7EB] transition-colors duration-300 flex items-center justify-between"
+              >
                 My Cart <i className="fa-solid fa-cart-shopping"></i>
               </button>
             </div>
-            <button
+            <NavLink
               onClick={toggleMenu}
-              className="w-full py-2 px-4 bg-[#F3F4F6] rounded-lg hover:bg-[#E5E7EB] transition-colors duration-300"
+              to="/"
+              className="w-full py-3 px-4 bg-[#F3F4F6] rounded-lg shadow hover:bg-[#E5E7EB] transition-colors duration-300 flex items-center justify-between"
             >
               Home
-            </button>
-            <button
+            </NavLink>
+            <NavLink
               onClick={toggleMenu}
-              className="w-full py-2 px-4 bg-[#F3F4F6] rounded-lg hover:bg-[#E5E7EB] transition-colors duration-300"
+              to="/products"
+              className="w-full py-3 px-4 bg-[#F3F4F6] rounded-lg shadow hover:bg-[#E5E7EB] transition-colors duration-300 flex items-center justify-between"
             >
               Products
-            </button>
-            <button
+            </NavLink>
+            <NavLink
               onClick={toggleMenu}
-              className="w-full py-2 px-4 bg-[#F3F4F6] rounded-lg hover:bg-[#E5E7EB] transition-colors duration-300"
+              to="/contacts"
+              className="w-full py-3 px-4 bg-[#F3F4F6] rounded-lg shadow hover:bg-[#E5E7EB] transition-colors duration-300 flex items-center justify-between"
             >
               Contacts
-            </button>
+            </NavLink>
           </div>
         </div>
       )}

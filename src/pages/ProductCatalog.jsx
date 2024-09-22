@@ -114,6 +114,7 @@ export default function ProductCatalog() {
                     <ProductCard
                       key={product.id}
                       {...product}
+                      sellingPrice={product.selling_price}
                       soldOut={product.sold_out === "true" ? "sold-out" : ""}
                       className={`border ${
                         product.sold_out === "true"
