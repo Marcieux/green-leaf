@@ -47,18 +47,21 @@ export default function ProductCatalog() {
       });
   }, []);
 
-  if (loading) return <Loading/>;
-  if (error) return <Error error={error}/>;
+  if (loading) return <Loading />;
+  if (error) return <Error error={error} />;
 
   return (
-    <div className="flex flex-col gap-16 py-6 px-4 desktop:mx-20 tablet:mx-10 max-mobile:gap-16">
+    <div className="flex flex-col gap-20 py-6 px-4 desktop:mx-20 tablet:mx-10 max-mobile:gap-10">
       {/* Banner Section */}
       <section className="flex h-full bg-custom-bg bg-center object-cover bg-cover pt-12 pr-12 pb-[7.8rem] pl-12 rounded-3xl overflow-hidden relative max-mobile:pb-5">
         <div className="flex flex-col opacity-80 gap-10 w-[45%] z-10 max-mobile:w-[70%] max-mobile:gap-5">
           <h1 className="text-[4rem] font-extrabold text-[#1e1e1e] leading-[4rem] max-tablet:text-[3rem] max-mobile:text-[2.5rem] max-mobile:leading-normal">
             Best Selling Plants
           </h1>
-          <p>We offer many different types of products with fewer variations in each category.</p>
+          <p>
+            We offer many different types of products with fewer variations in
+            each category.
+          </p>
           <div className="relative h-16 mobile:w-[350px]">
             <input
               className="outline-none bg-[#446969] placeholder:text-white text-white text-sm w-full h-full pr-[6rem] rounded-xl border-none p-[1.2rem] focus:outline-[#1e1e1e80] focus:outline-1"
@@ -76,42 +79,46 @@ export default function ProductCatalog() {
       </section>
 
       {/* Categories Section */}
-      <section className="my-28 mt-16">
+      <section className="">
         <div className="flex items-center justify-between gap-4 px-24 max-tablet:grid max-tablet:grid-cols-2 max-tablet:p-0">
           {categories.map((category, index) => (
-            <CategoryCard key={index} img={category.img} title={category.title} />
+            <CategoryCard
+              key={index}
+              img={category.img}
+              title={category.title}
+            />
           ))}
         </div>
       </section>
 
       {/* Products Section */}
-      <section className="products mb-32">
-        <div className="products-wrapper px-6 tablet:px-12 desktop:px-24">
-          <div className="products-content flex flex-col gap-24">
-            <div className="products-filter-and-cards flex flex-col tablet:flex-row gap-8">
+      <section className="">
+        <div className="px-6 tablet:px-12 desktop:px-24">
+          <div className="flex flex-col gap-24">
+            <div className="flex flex-col tablet:flex-row gap-8">
               <ProductFilter className="max-mobile:hidden" />
-              <div className="products-cards-container flex-1">
-                <div className="products-count-and-types-wrapper flex items-center justify-end flex-wrap">
-                  <div className="count-and-sort w-full flex items-center justify-between">
-                    <span className="products-count font-medium text-base text-[#1f1f1f]">
-                      Showed 30 items
+              <div className="flex-1">
+                <div className="flex items-center justify-between w-full">
+                  <span className="font-medium text-base text-[#1f1f1f]">
+                    Showed 30 items
+                  </span>
+                  <div className="flex items-center gap-4">
+                    <span className="font-medium text-base text-[#1f1f1f]">
+                      Sort by
                     </span>
-                    <div className="products-sort flex items-center gap-4">
-                      <span className="sort__text font-medium text-base text-[#1f1f1f]">
-                        Sort by
-                      </span>
-                      <Dropdown placeholder="Relevancy" options={options} />
-                    </div>
+                    <Dropdown placeholder="Relevancy" options={options} />
                   </div>
                 </div>
-                <div className="products__cards grid grid-cols-2 gap-6 tablet:grid-cols-3 desktop:grid-cols-4 mt-4">
+                <div className="grid grid-cols-2 gap-6 tablet:grid-cols-3 desktop:grid-cols-4 mt-4">
                   {products.map((product) => (
                     <ProductCard
                       key={product.id}
                       {...product}
                       soldOut={product.sold_out === "true" ? "sold-out" : ""}
                       className={`border ${
-                        product.sold_out === "true" ? "border-[#dc716b]" : "border-[#c1dcdc]"
+                        product.sold_out === "true"
+                          ? "border-[#dc716b]"
+                          : "border-[#c1dcdc]"
                       }`}
                     />
                   ))}
@@ -123,22 +130,22 @@ export default function ProductCatalog() {
       </section>
 
       {/* Banner Section */}
-      <section className="banner mb-20">
-        <div className="banner-wrapper max-w-[1440px] mx-auto px-6 tablet:px-24 h-[512px] flex items-end relative">
-          <div className="banner-content w-full h-[463px] flex items-center bg-[#f5f5f5] rounded-[22px] py-[4rem] px-[1.5rem] tablet:py-[6rem] tablet:px-[3rem]">
-            <h3 className="banner__title font-normal text-[2rem] leading-[50px] text-[#1e1e1ebf] tablet:text-[2.5rem] tablet:leading-[60px]">
+      <section className="mb-20">
+        <div className="px-24 h-[612px] flex items-end relative">
+          <div className="text-[#1e1e1ebf] w-full h-[463px] flex flex-col gap-4 items-start bg-[#f5f5f5] rounded-[22px] py-[4rem] px-[1.5rem] tablet:py-[6rem] tablet:px-[3rem]">
+            <h3 className="font-normal text-[2rem] leading-[50px] text-[#1e1e1ebf] tablet:text-[2.5rem] tablet:leading-[60px]">
               Transform
-              <span className="banner__text font-normal text-[1.2rem] leading-[30px] tablet:text-[1.5rem] tablet:leading-[36px]">
-                any environment into a natural and cozy haven with plants.
-              </span>
             </h3>
+            <span className="desktop:w-full font-normal text-[1.2rem] leading-[30px] tablet:text-[1.5rem] tablet:leading-[36px] tablet:w-[50%]">
+              any environment into a natural and cozy haven with plants.
+            </span>
             <img
               src={banner}
               alt="banner_footer"
-              className="banner-image absolute right-[-20px] bottom-0 rounded-[18px] z-[1] hidden tablet:block"
+              className="absolute right-[-20px] bottom-0 rounded-[18px] z-[1] max-mobile:hidden max-tablet:hidden"
             />
-            <PlantDrawBanner className="banner-stroke relative -left-[790px] -bottom-[120px] w-[170px] max-tablet:absolute max-tablet:-left-10 max-tablet:-bottom-[160px]" />
-            <PlantDrawBanner className="banner-stroke absolute w-[390px] left-[610px] bottom-0 max-tablet:left-[410px] max-mobile:hidden" />
+            <PlantDrawBanner className="absolute left-0 h-[200px] w-[200px] bottom-[200px]" />
+            <PlantDrawBanner className="absolute w-[390px] left-[610px] bottom-0 max-tablet:left-[410px] max-mobile:hidden" />
           </div>
         </div>
       </section>
