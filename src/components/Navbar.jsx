@@ -28,12 +28,12 @@ export default function Navbar() {
     >
       {/* Burger Menu Button */}
       <button
-        className={`mobile:hidden text-2xl z-40 transition-transform duration-500 ${isOpen ? "rotate-45" : "rotate-0"}`}
+        className={`space-y-1 mobile:hidden text-2xl z-40 transition-transform duration-500 ${isOpen ? "rotate-45" : "rotate-0"}`}
         onClick={toggleMenu}
       >
         <div className={`w-6 h-0.5 bg-[#598888] transition-all duration-300 ${isOpen ? "transform translate-y-1.5" : ""}`}></div>
         <div className={`w-6 h-0.5 bg-[#598888] transition-all duration-300 ${isOpen ? "opacity-0" : "opacity-100"}`}></div>
-        <div className={`w-6 h-0.5 bg-[#598888] transition-all duration-300 ${isOpen ? "-translate-y-1.5" : ""}`}></div>
+        <div className={`w-6 h-0.5 bg-[#598888] transition-all duration-300 ${isOpen ? "transform -translate-y-1.5 -rotate-90" : ""}`}></div>
       </button>
 
       {/* Logo */}

@@ -12,7 +12,7 @@ export default function AddToCart({ product }) {
   return (
     <button 
       onClick={addToCart}
-      className="w-full justify-self-center space-x-2 text-base font-light h-10 mt-4 bg-[#446969] text-white px-4 rounded-md max-tablet:text-sm transition hover:opacity-80 active:bg-[#244545]" 
+      className="w-full justify-self-center space-x-2 text-base font-light h-10 mt-4 bg-[#446969] text-white px-4 rounded-md max-mobile:space-x-0 max-tablet:text-sm transition hover:opacity-80 active:bg-[#244545]" 
     >
       <i className="fa-brands fa-opencart"></i> <span>Add to Cart</span>
     </button>

@@ -62,9 +62,9 @@ export default function ProductCatalog() {
             We offer many different types of products with fewer variations in
             each category.
           </p>
-          <div className="relative h-16 mobile:w-[350px]">
+          <div className="relative h-16 mobile:w-[350px] ">
             <input
-              className="outline-none bg-[#446969] placeholder:text-white text-white text-sm w-full h-full pr-[6rem] rounded-xl border-none p-[1.2rem] focus:outline-[#1e1e1e80] focus:outline-1"
+              className="outline-none bg-[#446969] placeholder:text-white text-white text-sm w-full h-full pr-[6rem] rounded-xl border-none p-[1.2rem] focus:outline-[#1e1e1e80] focus:outline-1 max-mobile:text-xs max-mobile:pr-[4rem]"
               type="text"
               placeholder="What are you looking for?"
             />
@@ -132,7 +132,7 @@ export default function ProductCatalog() {
 
       {/* Banner Section */}
       <section className="mb-20">
-        <div className="px-24 h-[612px] flex items-end relative">
+        <div className="px-24 h-[612px] flex items-end relative max-mobile:px-12">
           <div className="text-[#1e1e1ebf] w-full h-[463px] flex flex-col gap-4 items-start bg-[#f5f5f5] rounded-[22px] py-[4rem] px-[1.5rem] tablet:py-[6rem] tablet:px-[3rem]">
             <h3 className="font-normal text-[2rem] leading-[50px] text-[#1e1e1ebf] tablet:text-[2.5rem] tablet:leading-[60px]">
               Transform
